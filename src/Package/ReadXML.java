@@ -2,7 +2,7 @@ package Package;
 import java.io.*;
 import java.util.Arrays;
 
-public class HelloWorld {
+public class ReadXML {
     public static void main(String[] args) {
         try(FileReader reader = new FileReader("./files/Example.xml"))
         {
