@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="Транспорт">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="ЕдиницаТехники">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="ТипТранспорта" type="xs:string"/>
+                     <xs:element name="НомерТранспортногоСредства" type="xs:int"/>
+                     <xs:element name="МаркаСранспортногоСредсвта" type="xs:string"/>
+                     <xs:element name="ВместительностьПассажиров" type="xs:int"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="Водитель">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="НомерВодительскогоУдостоверения" type="xs:string"/>
+                     <xs:element name="Фамилия" type="xs:string"/>
+                     <xs:element name="Имя" type="xs:string"/>
+                     <xs:element name="Отчество" type="xs:string"/>
+                     <xs:element name="ДатаРождения" type="xs:date"/>
+                     <xs:element name="ДатаПолученияВодительскихПрав" type="xs:date"/>
+                     <xs:element name="КатегорииВодителя" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="Контролёр">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="Фамилия" type="xs:string"/>
+                     <xs:element name="Имя" type="xs:string"/>
+                     <xs:element name="Отчество" type="xs:string"/>
+                     <xs:element name="ДатаРождения" type="xs:date"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="Маршрут">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="НачальнаяОстановка" type="xs:string"/>
+                     <xs:element name="КонечнаяОстановка" type="xs:string"/>
+                     <xs:element name="СтоимостьПроезда" type="xs:double"/>
+                     <xs:element name="ВремяНачалаДвижения" type="xs:time"/>
+                     <xs:element name="ВремяОкончанияДвижения" type="xs:time"/>
+                     <xs:element name="КоличествоЕдиницТехникиНаМаршруте" type="xs:int"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+         <xs:attribute name="id" type="xs:string" use="required"/>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
