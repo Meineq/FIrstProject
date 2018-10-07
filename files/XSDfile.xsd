@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <xs:element name="Транспорт">
       <xs:complexType>
-         <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element name="ЕдиницаТехники">
                <xs:complexType>
                   <xs:sequence>
@@ -52,7 +52,7 @@
                   <xs:attribute name="id" type="xs:string" use="required"/>
                </xs:complexType>
             </xs:element>
-         </xs:sequence>
+         </xs:choice>
          <xs:attribute name="id" type="xs:string" use="required"/>
       </xs:complexType>
    </xs:element>

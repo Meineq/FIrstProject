@@ -1,60 +1,33 @@
 package Package;
 
-import java.sql.Time;
+import java.util.Date;
 
 public class Way {
-    private int FirsPoint;
-    private int LastPoint;
+    private String FirsPoint;
+    private String LastPoint;
     private double Cost;
-    private Time Start;
-    private Time Finish;
+    private Date Start;
+    private Date Finish;
     private int countMachine;
 
-    public int getFirsPoint() {
-        return FirsPoint;
-    }
+   public Way(String FirsPoint, String LastPoint, double Cost, Date Start, Date Finish, int countMachine){
+       this.FirsPoint = FirsPoint;
+       this.LastPoint = LastPoint;
+       this.Cost = Cost;
+       this.Start = Start;
+       this.Finish = Finish;
+       this.countMachine = countMachine;
+   }
 
-    public void setFirsPoint(int firsPoint) {
-        FirsPoint = firsPoint;
-    }
+    public String toString()
+    {
+        String resString = "\nНачальная отсановка: " + this.FirsPoint;
+        resString += "\nКонечная отсановка: " + this.LastPoint;
+        resString += "\nСтоимость проезда: " + this.Cost;
+        resString += "\nВремя начала движения по маршруту: " + this.Start;
+        resString += "\nВремя окончания движения по маршруту: " + this.Finish;
+        resString += "\nКоличество техники на маршруте: " + this.countMachine + "\n";
 
-    public int getLastPoint() {
-        return LastPoint;
-    }
-
-    public void setLastPoint(int lastPoint) {
-        LastPoint = lastPoint;
-    }
-
-    public double getCost() {
-        return Cost;
-    }
-
-    public void setCost(double cost) {
-        Cost = cost;
-    }
-
-    public Time getStart() {
-        return Start;
-    }
-
-    public void setStart(Time start) {
-        Start = start;
-    }
-
-    public Time getFinish() {
-        return Finish;
-    }
-
-    public void setFinish(Time finish) {
-        Finish = finish;
-    }
-
-    public int getCountMachine() {
-        return countMachine;
-    }
-
-    public void setCountMachine(int countMachine) {
-        this.countMachine = countMachine;
+        return resString;
     }
 }

@@ -1,40 +1,27 @@
 package Package;
 
+import java.text.SimpleDateFormat;
+
 public class Machine {
     private String typeMachine;
     private  String number;
     private  String brand;
     private int countNumbers;
 
-    public String getTypeMachine() {
-        return typeMachine;
-    }
 
-    public void setTypeMachine(String typeMachine) {
+    public Machine(String typeMachine, String number, String brand, int countNumbers) {
         this.typeMachine = typeMachine;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
         this.number = number;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
         this.brand = brand;
-    }
-
-    public int getCountNumbers() {
-        return countNumbers;
-    }
-
-    public void setCountNumbers(int countNumbers) {
         this.countNumbers = countNumbers;
+    }
+    public String toString()
+    {
+        String resString = "\nТип техники: " + this.typeMachine;
+        resString += "\nНомер техники: " + this.number;
+        resString += "\nМарка автомобиля: " + this.brand;
+        resString += "\nВместительность пассажиров: " + this.countNumbers + "\n";
+
+        return resString;
     }
 }
