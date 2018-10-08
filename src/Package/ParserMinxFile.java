@@ -1,32 +1,35 @@
 package Package;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.File;
 
-public class Parser {
-    protected File file;
 
-    protected Parser(File file){
-        this.file = file;
+public class ParserMinxFile extends Parser {
+
+
+    protected ParserMinxFile(File file) {
+        super(file);
     }
 
     public boolean doParse(Transport transport) throws FileNotFoundException, ParseException {
         Scanner scaner = new Scanner(file);
+        scaner.useDelimiter("><");
         boolean isAtribute = false;
         String[] Classes = {"Machine", "Voditel", "Controller", "Way"};
         String[] ClassesAssociative = {"Техника", "Водитель", "Контролёр", "Маршрут"};
         ArrayList<String> classAtributes = new ArrayList<>();
-        while(scaner.hasNextLine()){
-            String str = scaner.nextLine().trim();
+        while(scaner.hasNext()){
+            String str = scaner.next().trim();
             int startClassInd, endClassInd;
             boolean isAtributeTmp = isAtribute;
 
             for (int i=0;i<Classes.length;i++){
-                startClassInd = str.indexOf("<" + ClassesAssociative[i] + ">");
-                endClassInd = str.indexOf("</" + ClassesAssociative[i] + ">");
-                if (startClassInd !=-1){
+                startClassInd = str.indexOf(ClassesAssociative[i]);
+                endClassInd = str.indexOf("/" + ClassesAssociative[i]);
+                int slash = str.indexOf("/");
+                if (startClassInd !=-1 && slash !=0){
                     isAtribute = true;
                     break;
                 }
@@ -59,7 +62,8 @@ public class Parser {
                 }
             }
             if (isAtribute && isAtributeTmp){
-                classAtributes.add(str.substring(str.indexOf(">")+1, str.lastIndexOf("<")));
+                String substring = str.substring(str.indexOf(">")+1, str.lastIndexOf("</"));
+                classAtributes.add(substring);
             }
         }
         return true;

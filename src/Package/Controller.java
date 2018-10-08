@@ -7,15 +7,15 @@ public class Controller extends Person{
     public Controller(String firstName, String secondName, String fatherSName, Date bDate) {
         this.firstName = firstName;
         this.secondName = secondName;
-        this.firstName = fatherSName;
+        this.fatherSName = fatherSName;
         this.bDate = bDate;
     }
 
     public String toString(String formatDateOutput)
     {
-        String resString = "\nИмя водителя: " + this.firstName;
-        resString += "\nФамилия водителя: " + this.secondName;
-        resString += "\nОтчество водителя: " + this.fatherSName;
+        String resString = "\nИмя кондуктора: " + this.firstName;
+        resString += "\nФамилия кондуктора: " + this.secondName;
+        resString += "\nОтчество кондуктора: " + this.fatherSName;
         resString += "\nДата рождения: " + new SimpleDateFormat(formatDateOutput).format(this.bDate) + "\n";
 
         return resString;
