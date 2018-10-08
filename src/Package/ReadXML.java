@@ -6,7 +6,7 @@ public class ReadXML {
     public static void main(String[] args) {
         try {
             Transport tran = new Transport();
-            ParserMinxFile parser = new ParserMinxFile(new File("./files/XMLfromXSDmin.xml"));
+            ParserMinxFile parser = new ParserMinxFile(new File("./files/XMLfromXSDminNew.xml"));
             parser.doParse(tran);
             System.out.println(tran.getMachinesInfo());
             System.out.println(tran.getVoditelssInfo());

@@ -5,9 +5,9 @@ import java.io.FileWriter;
 
 public class GenerateFile {
     public static void main(String[] args) {
-        try (FileWriter fileWriter = new FileWriter(new File("./files/XMLfromXSDminNew.xml"));)
+        try (FileWriter fileWriter = new FileWriter(new File("./files/XMLfromXSDminNew.xml")))
         {
-            fileWriter.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+            fileWriter.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             for(int i = 0; i < 1500000; i++)
             {
                 fileWriter.append("<Техника><ТипТранспорта>str123456</ТипТранспорта><НомерТранспортногоСредства>123</НомерТранспортногоСредства><МаркаСранспортногоСредсвта>str1234</МаркаСранспортногоСредсвта><ВместительностьПассажиров>123</ВместительностьПассажиров></Техника><Техника><ТипТранспорта>str2345</ТипТранспорта><НомерТранспортногоСредства>1234</НомерТранспортногоСредства><МаркаСранспортногоСредсвта>str12345</МаркаСранспортногоСредсвта><ВместительностьПассажиров>1234</ВместительностьПассажиров></Техника>");

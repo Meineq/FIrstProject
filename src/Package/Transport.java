@@ -71,52 +71,52 @@ public class Transport {
     public String getMachinesInfo()
     {
         String resString = "Всего техники: " + machinesList.size()+"\n";
-        int i = 1;
-        for (Machine machine: machinesList)
-        {
-            resString = resString.concat("---------------\nТехника №" + i + ":");
-            resString = resString.concat(machine.toString()+"---------------\n");
-            i++;
-        }
+//        int i = 1;
+//        for (Machine machine: machinesList)
+//        {
+//            resString = resString.concat("---------------\nТехника №" + i + ":");
+//            resString = resString.concat(machine.toString()+"---------------\n");
+//            i++;
+//        }
         return resString;
     }
 
     public String getVoditelssInfo()
     {
         String resString = "Всего водителей: " + voditelsList.size()+"\n";
-        int i = 1;
-        for (Voditel voditel: voditelsList)
-        {
-            resString = resString.concat("---------------\nВодитель №" + i + ":");
-            resString = resString.concat(voditel.toString()+"---------------\n");
-            i++;
-        }
+//        int i = 1;
+//        for (Voditel voditel: voditelsList)
+//        {
+//            resString = resString.concat("---------------\nВодитель №" + i + ":");
+//            resString = resString.concat(voditel.toString()+"---------------\n");
+//            i++;
+//        }
         return resString;
     }
 
     public String getControllerssInfo()
     {
         String resString = "Всего кондукторов: " + controllerList.size()+"\n";
-        int i = 1;
-        for (Controller controller: controllerList)
-        {
-            resString = resString.concat("---------------\nКонтруктор №" + i + ":");
-            resString = resString.concat(controller.toString()+"---------------\n");
-            i++;
-        }
+//        int i = 1;
+//        for (Controller controller: controllerList)
+//        {
+//            resString = resString.concat("---------------\nКонтруктор №" + i + ":");
+//            resString = resString.concat(controller.toString()+"---------------\n");
+//            i++;
+//        }
         return resString;
     }
 
     public String getWayssInfo()
     {
         String resString = "Всего маршрутов: " + waysList.size()+"\n";
-        int i = 1;
-        for (Way way: waysList)
-        {
-            resString = resString.concat("---------------\nМаршрут №" + i + ":");
-            resString = resString.concat(way.toString()+"---------------\n");
-            i++;
-        }
+//        int i = 1;
+//        for (Way way: waysList)
+//        {
+//            resString = resString.concat("---------------\nМаршрут №" + i + ":");
+//            resString = resString.concat(way.toString()+"---------------\n");
+//            i++;
+//        }
         return resString;
     }
 }

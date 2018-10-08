@@ -39,22 +39,22 @@ public class ParserMinxFile extends Parser {
                     switch(Classes[i]) {
                         case "Machine":
                             if (transport.addMachine(classAtributes)){
-                                System.out.println("Единица техники добавлена");
+                                //System.out.println("Единица техники добавлена");
                             }
                             break;
                         case "Voditel" :
                             if (transport.addVoditel(classAtributes)){
-                                System.out.println("Водитель добавлен");
+                                //System.out.println("Водитель добавлен");
                             }
                             break;
                         case "Controller" :
                             if (transport.addController(classAtributes)){
-                                System.out.println("Контролёр добавлен");
+                                //System.out.println("Контролёр добавлен");
                             }
                             break;
                         case "Way" :
                             if (transport.addWay(classAtributes)){
-                                System.out.println("Маршрут добавлен");
+                                //System.out.println("Маршрут добавлен");
                             }
                     }
                     classAtributes.clear();
